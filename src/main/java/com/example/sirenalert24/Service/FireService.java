@@ -42,7 +42,7 @@ public class FireService {
                 nearbySirens.add(siren);
             }
         }
-
+        fire.setTimestamp(java.time.LocalDateTime.now());
         fire.setSirens(nearbySirens);
         return fireRepo.save(fire);
     }
